@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky
+        src="https://cdn.glitch.global/4cb2dafe-67a2-4c7f-b424-b5ef32487f34/Moving_Forest_1050_700.webp?v=1696984169228"
+        rotation="0 -130 0"
+      ></a-sky>   
+		<a-box position="0 2 0" rotation="0 45 45" scale="2 4 2">
+			<a-sphere position="1 0 3"></a-sphere>
+		</a-box>
+		
+		<a-entity position="0 2 -1.5" geometry="primitive: box" material="color: black"
+              animation__color="property: material.color; dir: alternate; dur: 1000;
+                                easing: easeInSine; loop: true; to: #FFF">
+		</a-entity>
+    </a-scene>
+  </body>
+</html>

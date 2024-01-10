@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+	
+  </head>
+  <body>
+	 <script src="./sphere-component.js"></script> 
+	<!--
+	<script>
+	AFRAME.registerComponent('my-color-toggle', {
+	init: function() {
+		let el = this.el;
+		
+		this.toggleColor = function() { // adding a method
+			el.setAttribute('color','orange');
+			console.log("toggleColor event");
+			alert("clicked");
+		};
+		
+		
+		this.el.addEventListener('click', this.toggleColor, { passive: true });
+	},
+	remove: function() {
+		this.el.removeEventListener('click', this.toggleColor);
+	}
+});
+	</script>
+	-->
+    <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .rayclick;">
+	  <!-- https://www.shadedrelief.com/natural3/pages/textures.html -->
+	  <!-- src="./1_earth_8k.jpg" -->
+	  <!-- src="./waternormals.jpg" -->
+	  
+      <a-sphere id="mysphere" position="0 3 -5" class="clickable" src="./waternormals.jpg" radius="1" my-color-toggle></a-sphere>
+	  <a-entity raycaster="objects: .mysphere" cursor></a-entity>
+    </a-scene>
+  </body>
+</html>

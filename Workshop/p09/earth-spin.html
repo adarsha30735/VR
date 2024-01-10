@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <!-- <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script> -->
+  </head>
+  <body>
+  <script src="js/aframe.io_releases_1.4.1_aframe.min.js"></script>
+    <a-scene>
+		<a-assets>
+		<img id="earth" src="https://ucarecdn.com/0f899a89-9fbd-411c-bce2-4c18558c228b/" crossorigin="anonymous">
+		</a-assets>
+      <a-sky
+        color="blue"
+        rotation="0 -130 0"
+      ></a-sky>
+      <a-entity rotation="45 0 0" position="-44.277 50 -80.933">
+    
+		<!-- Sphere's position is now relative and set to "0 0 0" (or omitted) within the container, so rotation should work as expected. -->
+		<a-sphere rotation="0 0 0" radius="30" src="#earth" roughness="0.6">
+
+		<a-animation attribute="rotation" easing="linear" dur="1000" to="0 360 0" repeat="indefinite">
+		</a-animation>
+		</a-sphere>
+
+  </a-entity>
+    </a-scene>
+  </body>
+</html>

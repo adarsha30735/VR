@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
+
+   </head>
+  <body>
+  	 <script src="./sphere-component.js"></script> 
+	
+	  <a-scene  cursor="rayOrigin: mouse;" raycaster="objects: .rayclick;">
+		
+			<a-sphere id="one" position="-2 0 -7" src="./waternormals.jpg" color="red" class="rayclick" my-color-toggle></a-sphere>
+			<a-entity raycaster="objects: .one" cursor></a-entity>
+			
+	  </a-scene>
+	
+  </body>
+</html>
